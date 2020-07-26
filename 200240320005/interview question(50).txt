@@ -1,0 +1,411 @@
+1.	Explain a Database system?
+
+ANS:-   A database is an organized collection of structured information, or data,
+        typically stored electronically in a computer system. A database is usually
+        controlled by a database management system (DBMS). Together, the data and the DBMS,
+        along with the applications that are associated with them, are referred to as a database system, 
+        often shortened to just database.
+
+
+2.	Explain database?
+
+ANS:-   A database is an organized collection of structured information, or data, 
+        typically stored electronically in a computer system. 
+        A database is usually controlled by a database management system (DBMS)
+
+
+3.	Define the benefits of DBMS?
+
+ANS:-   Data Redundancy. Unlike traditional file-system storage, Data Redundancy in DBMS is very less or not present. ...
+	Data Inconsistency.
+	Data Sharing.
+	Data Searching.
+	Data Security.
+	Data Concurrency.
+	Data Integration.
+	Data Access.
+
+
+4.	Write in brief the three levels of data abstraction.
+
+ANS:-	Physical level: This is the lowest level of data abstraction. It describes how data is actually
+	stored in database. You can get the complex data structure details at this level.
+
+	Logical level: This is the middle level of 3-level data abstraction architecture. It describes what
+	data is stored in database.
+
+	View level: Highest level of data abstraction. This level describes the user interaction with
+	database system.
+
+
+5.	Explain durability in DBMS?
+
+ANS:-	This property ensures that once the transaction has completed execution, the updates and modifications
+	to the database are stored in and written to disk and they persist even if a system failure occurs.
+	These updates now become permanent and are stored in non-volatile memory. 
+	The effects of the transaction, thus, are never lost.
+
+
+6.	What do you mean by atomicity and aggregation?
+
+ANS:-	Aromicity:- Each transaction is considered as one unit and either runs to completion or is not
+	executed at all. It involves the following two operations.
+	—Abort: If a transaction aborts, changes made to database are not visible.
+	—Commit: If a transaction commits, changes made are visible.
+	Atomicity is also known as the ‘All or nothing rule’.
+	
+	Aggregation:-Aggregation is a process in which a single entity alone is not able to make sense in 
+	a relationship so the relationship of two entities acts as one entity. 
+
+
+7.	Explain a checkpoint and When does it occur?
+
+ANS:-	The checkpoint is a type of mechanism where all the previous logs are removed from the system
+	and permanently stored in the storage disk.
+	The checkpoint is like a bookmark. While the execution of the transaction, such checkpoints are 
+	marked, and the transaction is executed then using the steps of the transaction, the log files 
+	will be created.
+	When it reaches to the checkpoint, then the transaction will be updated into the database, 
+	and till that point, the entire log file will be removed from the file. Then the log file is 
+	updated with the new step of transaction till next checkpoint and so on.
+	The checkpoint is used to declare a point before which the DBMS was in the consistent state,
+	and all transactions were committed.
+
+
+8.	Define the different phases of transaction?
+
+ANS:-	Different phases are
+	1) Analysis phase,
+	2) Redo Phase,
+	3) Undo phase.
+
+
+9.	What do you mean by flat file database?
+
+ANS:-   A flat file database is a type of database that stores data in a single table. This is unlike a 
+	relational database, which makes use of multiple tables and relations. Flat file databases are 
+	generally in plain-text form, where each line holds only one record.
+	The fields in the record are separated using delimiters such as tabs and commas.
+
+
+10.	Explain "transparent DBMS"?
+
+ANS:-	It is one, which keeps its Physical Structure hidden from user.
+
+
+11.	Explain a query?
+
+ANS:-	A query with respect to DBMS relates to user commands that are used to interact with a data base.
+	The query language can be classified into data definition language and data manipulation language.
+
+
+12.	What do you mean by Correlated subquery?
+
+ANS:-	Subqueries, or nested queries, are used to bring back a set of rows to be used by the parent query.
+	Depending on how the subquery is written, it can be executed once for the parent query or it can be
+	executed once for each row returned by the parent query.
+	If the subquery is executed for each row of the parent, this is called a correlated subquery.
+
+
+13.	How do you communicate with an RDBMS?
+
+ANS:-	You communicate with an RDBMS using Structured Query Language (SQL).
+
+
+14.	Explain DDL (Data Definition Language)?
+
+ANS:-	A data base schema is specifies by a set of definitions expressed by a special language called DDL.
+
+
+15.	Explain VDL (View Definition Language)?
+
+ANS:-	It specifies user views and their mappings to the conceptual schema.
+
+16.	Explain SDL (Storage Definition Language)?
+
+ANS:-   This language is to specify the internal schema. This language may specify the mapping between two
+	schemas
+
+17.	Explain DML (Data Manipulation Language)?
+
+ANS:-	This language that enable user to access or manipulate data as organised by appropriate data model.
+	Procedural DML or Low level: DML requires a user to specify what data are needed and 
+	how to get those data.
+	Non-Procedural DML or High level: DML requires a user to specify what data are needed without
+	specifying how to get those data.
+
+
+18.	Explain the "integrity rules"?
+
+ANS:-	There are two Integrity rules.
+	Entity Integrity: States that "Primary key cannot have NULL value"
+
+	Referential Integrity: States that "Foreign Key can be either a NULL value or should be Primary Key 
+	value of other relation.
+
+
+19.	Explain Data Independence?
+
+
+ANS:-	Data independence means that "the application is independent of the storage structure and access 
+	strategy of data". In other words, The ability to modify the schema definition in one level 
+	should not affect the schema definition in the next higher level.
+	Two types of Data Independence:
+
+	Physical Data Independence: Modification in physical level should not affect the logical level.
+
+	Logical Data Independence: Modification in logical level should affect the view level.
+
+	NOTE: Logical Data Independence is more difficult to achieve
+
+
+20.	Explain a view? How it is related to data independence?
+
+ANS:-	A view may be thought of as a virtual table, that is, a table that does not really exist in its 
+	own right but is instead derived from one or more underlying base table. In other words, 
+	there is no stored file that direct represents the view instead a definition of view is stored in data 
+	dictionary.
+
+	Growth and restructuring of base tables is not reflected in views. Thus the view can insulate 
+	users from the effects of restructuring and growth in the database. Hence accounts for logical 
+	data independence.
+
+21.	Explain Data Model?
+
+ANS:-	A collection of conceptual tools for describing data, data relationships data semantics and constraints.
+
+
+22.	Explain E-R model?
+
+ANS:-	This data model is based on real world that consists of basic objects called entities and of 
+	relationship among these objects. Entities are described in a database by a set of attributes.
+
+
+23.	Explain Object Oriented model?
+
+ANS:-	This model is based on collection of objects. An object contains values stored in instance variable
+	with in the object. An object also contains bodies of code that operate on the object. 
+	These bodies of code are called methods. Objects that contain same types of values and the same 
+	methods are grouped together into classes
+
+
+24.	Explain an Entity?
+
+ANS:-	It is a 'thing' in the real world with an independent existence.
+
+25.	Explain an Entity type?
+
+ANS:-	It is a collection (set) of entities that have same attributes.
+
+
+26.	Explain an Entity set?
+
+ANS:-	It is a collection of all entities of particular entity type in the database.
+
+
+27.	Explain Weak Entity set?
+
+ANS:-	An entity set may not have sufficient attributes to form a primary key, and its primary key 
+	compromises of its partial key and primary key of its parent entity, then it is said to be Weak 
+	Entity set.
+
+28.	Explain an attribute?
+
+ANS:-	It is a particular property, which describes the entity.
+
+
+29.	Explain a Relation Schema and a Relation?
+
+ANS:-	A relation Schema denoted by R(A1, A2, ..., An) is made up of the relation name R and the list of 
+	attributes Ai that it contains. A relation is defined as a set of tuples. 
+	Let r be the relation which contains set tuples (t1, t2, t3, ..., tn). Each tuple is an ordered 
+	list of n-values t=(v1,v2, ..., vn).
+
+
+30.	Explain degree of a Relation?
+
+ANS:-	It is the number of attribute of its relation schema.
+
+31.	Explain Relationship?
+
+ANS:-	It is an association among two or more entities.
+
+
+32.	Explain Relationship set?
+
+ANS:-	The collection (or set) of similar relationships.
+
+
+33.	Explain normalization?
+
+ANS:-	It is a process of analysing the given relation schemas based on their Functional Dependencies (FDs)
+	and primary key to achieve the properties
+	(1).Minimizing redundancy, (2). Minimizing insertion, deletion and update anomalies.
+
+
+34.	Explain Functional Dependency?
+
+ANS:-	A Functional dependency is denoted by X Y between two sets of attributes X and Y that are subsets of
+	R specifies a constraint on the possible tuple that can form a relation state r of R. 
+	The constraint is for any two tuples t1 and t2 in r if t1[X] = t2[X] then they have t1[Y] = t2[Y]. 
+	This means the value of X component of a tuple uniquely determines the value of component Y.
+
+35.	Explain Fully Functional dependency?
+
+ANS:-	It is based on concept of full functional dependency. A functional dependency X Y is full functional
+	dependency if removal of any attribute A from X means that the dependency does not hold any more.
+
+36.	Explain 1 NF (Normal Form)?
+
+ANS:-	The domain of attribute must include only atomic (simple, indivisible) values
+
+
+37.	Explain 2NF?
+
+ANS:-	A relation schema R is in 2NF if it is in 1NF and every non-prime attribute A in R is fully 
+	functionally dependent on primary key.
+
+
+38.	Explain 3NF?
+
+ANS:-	A relation schema R is in 3NF if it is in 2NF and for every FD X A either of the following is true
+	X is a Super-key of R.
+	A is a prime attribute of R.
+	In other words, if every non prime attribute is non-transitively dependent on primary key.
+
+
+39.	Explain BCNF (Boyce-Codd Normal Form)?
+
+ANS:-	A relation schema R is in BCNF if it is in 3NF and satisfies an additional constraint that 
+	for every FD X A, X must be a candidate key.
+
+
+40.	Explain 4NF?
+
+ANS:-	A relation schema R is said to be in 4NF if for every Multivalued dependency X Y that holds over R, one of following is true.
+	1) X is subset or equal to (or) XY = R.
+	2) X is a super key.
+
+
+41.	Explain Domain-Key Normal Form?
+
+ANS:-	A relation is said to be in DKNF if all constraints and dependencies that should hold on the the 
+	constraint can be enforced by simply enforcing the domain constraint and key constraint on the relation.
+
+
+42.	Define partial, alternate, artificial, compound and natural key?
+
+ANS:-	Partial Key: It is a set of attributes that can uniquely identify weak entities and that are related 
+	to same owner entity. It is sometime called as Discriminator.
+
+	Alternate Key: All Candidate Keys excluding the Primary Key are known as Alternate Keys.
+
+	Artificial Key: If no obvious key, either stand alone or compound is available, then the last resort
+	is to simply create a key, by assigning a unique number to each record or occurrence. 
+	Then this is known as developing an artificial key.
+
+	Compound Key: If no single data element uniquely identifies occurrences within a construct,
+	then combining multiple elements to create a unique identifier for the construct is known as
+	creating a compound key.
+
+	Natural Key: When one of the data elements stored within a construct is utilized as the primary key,
+	then it is called the natural key.
+
+
+43.	Explain indexing and define the different kinds of indexing?
+
+ANS:-	Indexing is a technique for determining how quickly specific data can be found.
+	Types:
+	Binary search style indexing
+	B-Tree indexing
+	Inverted list indexing
+	Memory resident table
+	Table indexing
+
+
+44.	Write in brief the four types of indexes.
+
+
+ANS:-	1)Primary Indexing: Primary Index is an ordered file which is fixed length size with two fields. 
+	The first field is the same a primary key and second, filed is
+ pointed to that specific data block. 
+	In the primary Index, there is always one to one relationship between the entries in the index table.
+
+
+
+	2)Secondary Index:The secondary Index can be generated by a field which has a unique value for each
+	record, and it should be a candidate key. It is also known
+
+	as a non-clustering index.
+
+	
+	
+	3)Clustering Index:In a clustered index, records themselves are stored in the Index and not pointers. 
+	Sometimes the Index is created on non-primary key columns
+
+	4)Multilevel Index:Multilevel Indexing is created when a primary index does not fit in memory. 
+	In this type of indexing method, you can reduce the number of
+ disk accesses to short any record 
+	and kept on a disk as a sequential file and create a sparse base on that file.
+
+	
+
+	5)B-Tree Index:B-tree index is the widely used data structures for Indexing. 
+	It is a multilevel index format technique which is balanced binary search trees.
+
+
+45.	Explain system catalog or catalog relation? How is better known as?
+
+
+ANS:-	A RDBMS maintains a description of all the data that it contains, information about every relation
+	and index that it contains. This information is stored in a collection of relations maintained by 
+	the system called metadata. It is also called data dictionary.
+
+
+46.	Explain meant by query optimization?
+
+
+ANS:-	The phase that identifies an efficient execution plan for evaluating a query that has the least 
+	estimated cost is referred to as query optimization.
+
+
+47.	Explain SQL and state the differences among SQL and other conventional programming Languages.
+
+
+ANS:-	SQL is a nonprocedural language that is designed specifically for data access operations on 
+	normalized relational database structures. The primary difference between SQL and other conventional 
+	programming languages is that SQL statements specify what data operations should be performed rather 
+	than how to perform them.
+
+
+48.	Explain database Trigger?
+
+
+ANS:-	A database trigger is a PL/SQL block that can defined to automatically execute for insert, update, 
+	and delete statements against a table. The trigger can e defined to execute once for the entire 
+	statement or once for every row that is inserted, updated, or deleted. For any one table, 
+	there are twelve events for which you can define database triggers. A database trigger can 
+	call database procedures that are also written in PL/SQL.
+
+
+49.	Name four applications for triggers.
+
+
+ANS:-	1) providing default values,
+
+	
+	(2) enforcing data constraints,
+
+	
+	(3) updating views and
+
+	(4) enforcing referential integrity
+
+
+50.	Define stored-procedures? And Define the Benifits of using them?
+
+ANS:-	Stored procedures are database objects that perform a user defined operation. 
+	A stored procedure can have a set of compound SQL statements. A stored procedure executes 
+	the SQL commands and returns the result to the client. Stored procedures are used to reduce 
+	network traffic.
+
