@@ -1,7 +1,4 @@
-DATABASE 
-Assignment 5
 
-Submission Date: 28th Aug 2020
 
 1.	Explain a Database system?
 
