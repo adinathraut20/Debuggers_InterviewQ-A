@@ -1,0 +1,382 @@
+DATABASE 
+Assignment 5
+
+Submission Date: 28th Aug 2020
+
+1.	Explain a Database system?
+
+	-DBMS stands for Database Management System. We can break it like this DBMS = Database + Management System.
+	 Database is a collection of data and Management System is a set of programs to store and retrieve those data.Based on this we can define DBMS like this:DBMS 
+	 is a collection of inter-related data and set of programs to store & access those data in an easy and effective manner.
+
+2.	Explain database?
+
+	-Database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled
+	 by a database management system (DBMS).
+
+3.	Define the benefits of DBMS?
+
+	Data Security: Data Security is vital concept in a database. Only authorised users should be allowed to access the database and their identity should be authent-
+		       icated using a username and password. Unauthorised users should not be allowed to access the database under any circumstances as it violates the
+		       integrity constraints.
+
+	Data Integrity:Data integrity means that the data is accurate and consistent in the database. Data Integrity is very important as there are multiple databases
+			in a DBMS. All of these databases contain data that is visible to multiple users. So it is necessary to ensure that the data is correct and 
+			consistent in all the databases and for all the users. 
+
+	Data Consistency:Data consistency is ensured in a database because there is no data redundancy. All data appears consistently across the database and the data
+		 	is same for all the users viewing the database. Moreover, any changes made to the database are immediately reflected to all the users and there 
+			is no data inconsistency.
+
+4.	Write in brief the three levels of data abstraction.
+	
+	-Data Abstraction:Database systems are made-up of complex data structures. To ease the user interaction with database, the developers hide internal irrelevant 
+			  details from users.This process of hiding irrelevant details from user is called data abstraction.
+
+	-Physical level: This is the lowest level of data abstraction. It describes how data is actually stored in database.	
+			 You can get the complex data structure details at this level.
+
+	-Logical level: This is the middle level of 3-level data abstraction architecture. It describes what data is stored in database.
+
+	-View level: Highest level of data abstraction. This level describes the user interaction with database system.
+
+
+5.	Explain durability in DBMS?
+
+	In database systems, durability is the ACID property which guarantees that transactions that have committed will survive permanently. For example, if a flight
+	 booking reports that a seat has successfully been booked, then the seat will remain booked even if the system crashes.
+	
+6.	What do you mean by atomicity and aggregation?
+
+	Atomicity:Either all actions are carried out or none are. Users should not have to worry about the effect of incomplete transactions. DBMS ensures this by 
+		  undoing the actions of incomplete transactions.
+	Aggregation: A concept which is used to model a relationship between a collection of entities and relationships. It is used when we need to express a 
+		     relationship among relationships.
+
+
+7.	Explain a checkpoint and When does it occur?
+
+	Checkpoint: The checkpoint is a type of mechanism where all the previous logs are removed from the system and permanently stored in the storage disk.
+		    The checkpoint is like a bookmark. While the execution of the transaction, such checkpoints are marked, and the transaction is executed then using
+		    the steps of the transaction, the log files will be created. When it reaches to the checkpoint, then the transaction will be updated into the
+		    database, and till that point, the entire log file will be removed from the file. Then the log file is updated with the new step of transaction till
+		    next checkpoint and so on.The checkpoint is used to declare a point before which the DBMS was in the consistent state, and all transactions were
+                    committed.
+
+8.	Define the different phases of transaction?
+
+	- Active state: This phase is divided into two states:
+	- Initial phase: This phase is achieved when the transaction starts.
+	- Partially Committed phase: This is achieved when the transactions final statement has been executed. Even though the final statement is finished execution, the transaction may abort due to some failure.
+	- Failed state: This state is reached when the normal execution fails.
+	- Aborted state: A transaction is aborted when the system feels it needs to be failed. This state should not have any effect on the system and thus all changes done until it were aborted; are rolled back.
+	- Committed: After the transaction is successfully executed, it enters the committed state. In this state all changes are committed. These committed changes cannot be undone or aborting.
+
+
+9.	What do you mean by flat file database?
+
+	A flat file database is a type of database that stores data in a single table. This is unlike a relational database, which makes use of multiple tables and 
+	relations. Flat file databases are generally in plain-text form, where each line holds only one record. The fields in the record are separated using delimiters 
+	such as tabs and commas.
+
+
+10.	Explain "transparent DBMS"?
+
+	A transparent DBMS is the  one, which keeps its Physical Structure hidden from user.
+
+11.	Explain a query?
+
+	A query with respect to DBMS relates to user commands that are used to interact with a data base. The query language can be classified into data definition
+	language and data manipulation language.
+
+12.	What do you mean by Correlated subquery?
+
+	Subqueries, or nested queries, are used to bring back a set of rows to be used by the parent query. Depending on how the subquery is written, it can be executed
+	once for the parent query or it can be executed once for each row returned by the parent query. If the subquery is executed for each row of the parent, this is
+	 called a correlated subquery.
+	A correlated subquery can be easily identified if it contains any references to the parent subquery columns in its WHERE clause. Columns from the subquery cannot be referenced anywhere else in the parent query. The following example demonstrates a non-correlated subquery.
+
+	Example: Select * From CUST Where '10/03/1990' IN (Select ODATE From ORDER Where CUST.CNUM = ORDER.CNUM)
+
+13.	How do you communicate with an RDBMS?
+
+	We can communicate with an RDBMS using Structured Query Language (SQL).
+
+14.	Explain DDL (Data Definition Language)?
+
+	DDL(Data Definition Language) : DDL or Data Definition Language actually consists of the SQL commands that can be used to define the database schema. 
+	It simply deals with descriptions of the database schema and is used to create and modify the structure of database objects in the database.
+	Examples of DDL commands:
+	CREATE – is used to create the database or its objects (like table, index, function, views, store procedure and triggers).
+	DROP – is used to delete objects from the database.
+	ALTER-is used to alter the structure of the database.
+	TRUNCATE–is used to remove all records from a table, including all spaces allocated for the records are removed.
+	COMMENT –is used to add comments to the data dictionary.
+	RENAME –is used to rename an object existing in the database.
+
+
+
+15.	Explain VDL (View Definition Language)?
+
+	VDL: View Definition Language is used to specify user view and their mappings to the conceptual schema but in most DBMs's the DDL is used to define both concept-
+	     ual and external schemas. In relational DBMS’s SQL is used in the sale of VDL to define user are application views as results of predefined queries.
+
+16.	Explain SDL (Storage Definition Language)?
+
+	The storage definition language (SDL), is used to specify the internal schema. 		
+
+
+17.	Explain DML (Data Manipulation Language)?
+
+	DML(Data Manipulation Language) : The SQL commands that deals with the manipulation of data present in the database belong to DML or Data Manipulation Language
+					  and this includes most of the SQL statements.
+	Examples of DML:
+	INSERT – is used to insert data into a table.
+	UPDATE – is used to update existing data within a table.
+	DELETE – is used to delete records from a database table.
+
+18.	Explain the "integrity rules"?
+
+	There are two Integrity rules.
+	Entity Integrity: States that "Primary key cannot have NULL value"
+	Referential Integrity: States that "Foreign Key can be either a NULL value or should be Primary Key value of other relation.
+
+19.	Explain Data Independence?
+
+	Data independence means that "the application is independent of the storage structure and access strategy of data". In other words, The ability to modify the 
+	schema definition in one level should not affect the schema definition in the next higher level.
+	Two types of Data Independence:
+	Physical Data Independence: Modification in physical level should not affect the logical level.
+	Logical Data Independence: Modification in logical level should affect the view level.
+
+20.	Explain a view? How it is related to data independence?
+
+	A view may be thought of as a virtual table, that is, a table that does not really exist in its own right but is instead derived from one or more underlying
+	base table. In other words, there is no stored file that direct represents the view instead a definition of view is stored in data dictionary.
+	Growth and restructuring of base tables is not reflected in views. Thus the view can insulate users from the effects of restructuring and growth in the
+	database. Hence accounts for logical data independence.
+
+21.	Explain Data Model?
+
+	A collection of conceptual tools for describing data, data relationships data semantics and  constraints.
+
+22.	Explain E-R model?
+
+	An Entity–relationship model (ER model) describes the structure of a database with the help of a diagram, which is known as Entity Relationship Diagram (ER
+	Diagram). An ER model is a design or blueprint of a database that can later be implemented as a database. The main components of E-R model are: entity set and 
+	relationship set.
+
+23.	Explain Object Oriented model?
+
+	Object Oriented model is based on collection of objects. An object contains values stored in instance variables with in the object. An object also contains 
+	bodies of code that operate on the object. These bodies of code are called methods. Objects that contain same types of values and the same methods are grouped
+	together into classes.
+
+24.	Explain an Entity?
+
+	An entity is a real-world thing which can be distinctly identified like a person, place or a concept. It is an object which is distinguishable from others. 
+	If we cannot distinguish it from others then it is an object but not an entity.
+
+25.	Explain an Entity type?
+
+	The entity type is a collection of the entity having similar attributes.
+
+26.	Explain an Entity set?
+
+	Entity Set is a collection of entities of the same entity type.
+
+27.	Explain Weak Entity set?
+
+	Weak entity type doesn't have a key attribute. Weak entity type can't be identified on its own. It depends upon some other strong entity for its distinct
+	identity. This can be understood with a real-life example. There can be children only if the parent exits. There can be no independent existence of children.
+	There can be a room only if building exits. There can be no independent existence of a room. A weak entity is represented by a double outlined rectangle.
+
+28.	Explain an attribute?
+
+	Attribute: Attributes are the properties that define a relation. e.g.; ROLL_NO, NAME etc.
+
+29.	Explain a Relation Schema and a Relation?
+
+	A relation Schema denoted by R(A1, A2, ..., An) is made up of the relation name R and the list of attributes Ai that it contains. A relation is defined as a 
+	set of tuples. Let r be the relation which contains set tuples (t1, t2, t3, ..., tn). Each tuple is an ordered list of n-values t=(v1,v2, ..., vn).
+
+30.	Explain degree of a Relation?
+
+	Degree of a Relation: The number of attributes in the relation is known as degree of the relation
+
+31.	Explain Relationship?
+
+	The association among entities is called a relationship. For example, an employee works_at a department, a student enrolls in a course. Here, Works_at and
+	Enrolls are called relationships.
+
+32.	Explain Relationship set?
+
+	A set of relationships of similar type is called a relationship set. Like entities, a relationship too can have attributes. These attributes are called
+	descriptive attribute.
+
+33.	Explain normalization?
+
+	Normalization is a process of organizing the data in database to avoid data redundancy, insertion anomaly, update anomaly & deletion anomaly.
+ 
+34.	Explain Functional Dependency?
+
+	The attributes of a table is said to be dependent on each other when an attribute of a table uniquely identifies another attribute of the same table.
+	For example: Suppose we have a student table with attributes: Stu_Id, Stu_Name, Stu_Age. Here Stu_Id attribute uniquely identifies the Stu_Name attribute of 
+		    student table because if we know the student id we can tell the student name associated with it. This is known as functional dependency and can be 
+		    written as Stu_Id->Stu_Name or in words we can say Stu_Name is functionally dependent on Stu_Id.
+
+35.	Explain Fully Functional dependency?
+
+	An attribute is fully functional dependent on another attribute, if it is Functionally Dependent on that attribute and not on any of its proper subset.
+	For example, an attribute Q is fully functional dependent on another attribute P, if it is Functionally Dependent on P and not on any of the proper subset of P.
+
+36.	Explain 1 NF (Normal Form)?
+
+	First Normal Form (1NF)
+	A relation will be 1NF if it contains an atomic value.
+	It states that an attribute of a table cannot hold multiple values. It must hold only single-valued attribute.
+	First normal form disallows the multi-valued attribute, composite attribute, and their combinations.
+
+37.	Explain 2NF?
+
+	Second Normal Form (2NF)
+	In the 2NF, relational must be in 1NF.
+	In the second normal form, all non-key attributes are fully functional dependent on the primary key
+	Example: Let's assume, a school can store the data of teachers and the subjects they teach. In a school, a teacher can teach more than one subject.
+
+38.	Explain 3NF?
+
+	Third Normal Form (3NF)
+	A relation will be in 3NF if it is in 2NF and not contain any transitive partial dependency.
+	3NF is used to reduce the data duplication. It is also used to achieve the data integrity.
+	If there is no transitive dependency for non-prime attributes, then the relation must be in third normal form.
+	A relation is in third normal form if it holds atleast one of the following conditions for every non-trivial function dependency X → Y.
+	X is a super key.
+	Y is a prime attribute, i.e., each element of Y is part of some candidate key.
+
+39.	Explain BCNF (Boyce-Codd Normal Form)?
+
+	Boyce Codd normal form (BCNF) BCNF is the advance version of 3NF. It is stricter than 3NF.
+	A table is in BCNF if every functional dependency X → Y, X is the super key of the table.
+	For BCNF, the table should be in 3NF, and for every FD, LHS is super key.
+
+40.	Explain 4NF?
+
+	Fourth normal form (4NF) A relation will be in 4NF if it is in Boyce Codd normal form and has no multi-valued dependency.
+	For a dependency A → B, if for a single value of A, multiple values of B exists, then the relation will be a multi-valued dependency.
+
+41.	Explain Domain-Key Normal Form?
+
+	A relation is in DKNF when insertion or delete anomalies are not present in the database. Domain-Key Normal Form is the highest form of Normalization.
+	The reason is that the insertion and updation anomalies are removed. The constraints are verified by the domain and key constraints.
+	A table is in Domain-Key normal form only if it is in 4NF, 3NF and other normal forms
+
+42.	Define partial, alternate, artificial, compound and natural key?
+
+	Partial Key:It is a set of attributes that can uniquely identify weak entities and that are related to same owner entity. It is sometime called as Discriminator.
+	Alternate Key:All Candidate Keys excluding the Primary Key are known as Alternate Keys.
+	Artificial Key:	If no obvious key, either stand alone or compound is available, then the last resort is to simply create a key, by assigning a unique number to each record or occurrence. Then this is known as developing an artificial key.
+	Compound Key:If no single data element uniquely identifies occurrences within a construct, then combining multiple elements to create a unique identifier for 
+		     the construct is known as creating a compound key.
+	Natural Key:When one of the data elements stored within a construct is utilized as the primary key,then it is called the natural key.
+
+43.	Explain indexing and define the different kinds of indexing?
+
+	INDEXING is a data structure technique which allows you to quickly retrieve records from a database file. An Index is a small table having only two columns. 
+	The first column comprises a copy of the primary or candidate key of a table. Its second column contains a set of pointers for holding the address of the disk 
+	block where that specific key value stored.
+	An index -	
+	Takes a search key as input
+	Efficiently returns a collection of matching records.
+	Two main types of indexing methods are:
+	1)Primary Indexing:Primary Index is an ordered file which is fixed length size with two fields.
+			   The primary Indexing is also further divided into two types.
+				1)Dense Index:In a dense index, a record is created for every search key valued in the database. This helps you to search faster but 
+					      needs more space to store index records. In this Indexing, method records contain search key value and points to the
+					      real record on the disk.
+
+		
+				2)Sparse Index:It is an index record that appears for only some of the values in the file. Sparse Index helps you to resolve the issues
+						of dense Indexing. In this method of indexing technique, a range of index columns stores the same data block address,
+						and when data needs to be retrieved, the block address will be fetched.
+	2)Secondary Index:The secondary Index can be generated by a field which has a unique value for each record, and it should be a candidate key. It is also known
+			  as a non-clustering index.This two-level database indexing technique is used to reduce the mapping size of the first level. For the first level,
+			 a large range of numbers is selected because of this; the mapping size always remains small.
+
+44.	Write in brief the four types of indexes.
+
+
+	1)Primary Indexing: Primary Index is an ordered file which is fixed length size with two fields. The first field is the same a primary key and second, filed is
+				 pointed to that specific data block. In the primary Index, there is always one to one relationship between the entries in the index table.
+
+	2)Secondary Index:The secondary Index can be generated by a field which has a unique value for each record, and it should be a candidate key. It is also known
+			   as a non-clustering index.
+
+	3)Clustering Index:In a clustered index, records themselves are stored in the Index and not pointers. Sometimes the Index is created on non-primary key columns
+			    which might not be unique for each record. In such a situation, you can group two or more columns to get the unique values and create an index
+			    which is called clustered Index. This also helps you to identify the record faster.
+
+	4)Multilevel Index:Multilevel Indexing is created when a primary index does not fit in memory. In this type of indexing method, you can reduce the number of
+			    disk accesses to short any record and kept on a disk as a sequential file and create a sparse base on that file.
+
+	5)B-Tree Index:B-tree index is the widely used data structures for Indexing. It is a multilevel index format technique which is balanced binary search trees.
+			 All leaf nodes of the B tree signify actual data pointers.Moreover, all leaf nodes are interlinked with a link list, which allows a B tree to 
+			 support both random and sequential access.
+
+45.	Explain system catalog or catalog relation? How is better known as?
+
+	A RDBMS maintains a description of all the data that it contains, information about every relation and index that it contains. This information is stored in a 
+	collection of relations maintained by the system called metadata. It is also called data dictionary.
+
+46.	Explain meant by query optimization?
+
+	Query Optimization: A single query can be executed through different algorithms or re-written in different forms and structures. Hence, the question of query 
+	optimization comes into the picture – Which of these forms or pathways is the most optimal? The query optimizer attempts to determine the most efficient way 
+	to execute a given query by considering the possible query plans.
+
+47.	Explain SQL and state the differences among SQL and other conventional programming Languages.
+	
+	SQL is a nonprocedural language that is designed specifically for data access operations on normalized relational database structures. The primary difference
+	between SQL and other conventional programming languages is that SQL statements specify what data operations should be performed rather than how to perform 
+	them.
+
+48.	Explain database Trigger?
+
+	Trigger is a statement that a system executes automatically when there is any modification to the database. In a trigger, we first specify when the trigger is
+	to be executed and then the action to be performed when the trigger executes. Triggers are used to specify certain integrity constraints and referential 
+	constraints that cannot be specified using the constraint mechanism of SQL.
+
+49.	Name four applications for triggers.
+
+	1) providing default values,
+
+	(2) enforcing data constraints,
+
+	(3) updating views and
+
+	(4) enforcing referential integrity.
+
+50.	Define stored-procedures? And Define the Benifits of using them?
+ 
+	-Stored Procedures are created to perform one or more DML operations on Database. It is nothing but the group of SQL statements that accepts some input in the
+	form of parameters and performs some task and may or may not returns a value.
+
+	Syntax : Creating a Procedure
+
+	CREATE or REPLACE PROCEDURE name(parameters)
+	IS
+	variables;
+	BEGIN
+	//statements;
+	END;
+
+	A Stored Procedure is a type of code in SQL that can be stored for later use and can be used many times. So, whenever you need to execute the query, instead of
+	calling it you can just call the stored procedure. You can also pass parameters to a stored procedure, so that the stored procedure can act based on the paramet-
+	er values that is passed.
+	The main advantages of stored procedure are given below:
+	1)Better Performance –The procedure calls are quick and efficient as stored procedures are compiled once and stored in executable form.Hence the response is
+			      quick. The executable code is automatically cached, hence lowers the memory requirements.
+	2)Maintainability–Maintaining a procedure on a server is much easier then maintaining copies on various client machines, this is because scripts are in one 
+			location.
+	3)Security–Access to the Oracle data can be restricted by allowing users to manipulate the data only through stored procedures that execute with their definer’s
+		 privileges.
