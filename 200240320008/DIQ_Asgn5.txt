@@ -1,0 +1,569 @@
+____________________________________________________________________________________________________
+DATABASE Interview Questions Assignment No. 5
+
+Submission Date: 28th Aug 2020
+____________________________________________________________________________________________________
+1) Explain a Database system?
+
+Answer :
+
+Database system is a software that allows you to create,modify and retrieve 
+the data of the database(That is in general basic operations. But, It also provides
+some advanced operations)
+____________________________________________________________________________________________________
+2) Explain database?
+
+Answer :
+
+Database is a collection of data.
+
+In order to create database we use the following syntax :
+
+create database databasename;
+Eg. create database aishwarya;
+
+To enter into the database / Use it :
+
+use databasename;
+Eg. use aishwarya;
+
+The above are mostly used one's and needed everytime.
+_____________________________________________________________________________________________________
+3) Define the benefits of DBMS?
+
+Answer :
+
+Following are the benefits of DBMS :
+
+a. Data integrity.
+b. Data security.
+c. Consistency.
+d. Backup and recovery.
+e. Sharing of data.
+
+_____________________________________________________________________________________________________
+4) Write in brief the three levels of data abstraction.
+
+Answer :
+
+Following are the levels :
+
+a. Physical level
+b. Logical level
+c. View level
+
+Physical level: This is the lowest level of data abstraction. It describes how data is
+ actually stored in database. You can get the complex data structure details at this level.
+
+Logical level: This is the middle level of 3-level data abstraction architecture. 
+It describes what data is stored in database.
+
+View level: Highest level of data abstraction. This level describes 
+the user interaction with database system.
+
+______________________________________________________________________________________________________
+5) Explain durability in DBMS?
+
+Answer :
+
+DBMS provides ACID properties.
+A stands for Atomicity
+C stands for Consistency
+I stands for Isolation
+D stands for Durability
+
+Durability is the property that makes sure that transactions are permanently stored 
+and do not disappear or are erased by accident, even during a database crash. 
+It is accomplished by storing all transactions into a non-volatile storage medium.
+
+Eg.If a train travel booking notifies that a seat has successfully 
+been booked, then the seat will remain booked even if the system crashes.
+
+_______________________________________________________________________________________________________
+6) What do you mean by atomicity and aggregation?
+
+Answer :
+
+Atomicity: Either all actions are carried out or none are. 
+
+Aggregation: A concept which is used to model a relationship among a collection of entities and relationships. 
+It is used when we require to express a relationship between relationships.
+
+
+_______________________________________________________________________________________________________
+7)Explain a checkpoint and When does it occur?
+
+Answer :
+
+It is a savepoint.So, When any failure occurs it can be restored with the help of this.
+
+_______________________________________________________________________________________________________
+8)Define the different phases of transaction?
+
+Answer :
+
+1. Active : When executing
+2. Partial committed : When we perform last operation
+3. Failed : When system failure occurs
+_______________________________________________________________________________________________________
+9)What do you mean by flat file database?
+
+Answer :
+
+Flat file database is a database where data is stored into a single table. 
+_______________________________________________________________________________________________________
+10)Explain "transparent DBMS"?
+
+Answer :
+
+Data is hidden from the users. Let's day we have two users with name 'Aishwarya' and 'Deepika'
+Here, if there is a table created by Aishwarya. It won't be accessible by Deepika unless allowed.
+So, we can say that it is abstracted. 
+_______________________________________________________________________________________________________
+11)Explain a query?
+
+Answer :
+
+A query is a way of requesting information from the database. A database 
+query can be either a select query or an action query. A select query is a query 
+for retrieving data, while an action query requests 
+additional actions to be performed on the data, like deletion, insertion, and updating.
+_______________________________________________________________________________________________________
+12)What do you mean by Correlated subquery?
+
+Answer :
+
+Select query inside another select query. (Nested query)
+The inside select query gives the result to the parent query.
+_______________________________________________________________________________________________________
+13)How do you communicate with an RDBMS?
+
+Answer : 
+
+You can communicate RDBMS by structural query language (SQL).
+The SQL is used for inserting/modifying/deleting & Retrieving data from Database.
+
+Say, by using following things you can communicate :
+1.DDL
+2.DML
+3.DCL
+4.DQL
+5.TCL/DTL
+_______________________________________________________________________________________________________
+14)Explain DDL (Data Definition Language)?
+
+Answer :
+
+Data definition language (DDL) refers to the set of SQL commands that
+can create and manipulate the structures of a database.
+
+a. CREATE 
+
+Eg. create table aishwarya (...);
+
+b. ALTER 
+
+Eg. alter table aishwarya add columnname datatype;
+
+c. DROP 
+
+Eg. drop table aishwarya;
+
+
+_______________________________________________________________________________________________________
+15)Explain VDL (View Definition Language)?
+
+Answer :
+
+It creates different view for the different users. So,basically it provides security to the data.
+_______________________________________________________________________________________________________
+16)Explain SDL (Storage Definition Language)?
+
+Answer :
+
+To specify the internal schema.It is specified by a 
+combination of functions, parameters, and specifications related to storage of files.
+_______________________________________________________________________________________________________
+17)Explain DML (Data Manipulation Language)?
+
+Answer :
+
+It is used to manipulate / Make changes to the data.
+We can perform :
+
+insert,update,delete 
+
+eg. 
+
+insert into aishwarya values (.....);
+
+
+update aishwarya set age = 18;
+
+
+delete from aishwarya where age = 18;
+_______________________________________________________________________________________________________
+18)Explain the "integrity rules"?
+
+Answer :
+
+Primary key : should be unique and not null.
+
+Foreign to primary key matching are the "glue" which holds the database together.
+Another way of saying it
+Foreign keys provide the "links" between two relations.
+_______________________________________________________________________________________________________
+19)Explain Data Independence?
+
+Answer :
+
+Data Independence is defined as a property of DBMS that helps you to change the Database 
+schema at one level of a database system without requiring to change the schema at the next higher level. 
+Data independence helps you to keep data separated from all programs that make use of it.
+
+_______________________________________________________________________________________________________
+20)Explain a view? How it is related to data independence?
+
+Answer :
+
+A view may be thought of as a virtual table, that is, a table that does not really exist in its own right 
+but is instead derived from one or more underlying base table. Thus, the view can insulate users 
+from the effects of restructuring and growth in the database. Hence accounts for logical data independence.
+_______________________________________________________________________________________________________
+21)Explain Data Model?
+
+Answer :
+
+A data model is an abstract model that organizes elements of data and standardizes how 
+they relate to one another and to the properties of real-world entities. So, the 
+"data model" of a banking application may be defined using the entity-relationship "data model".
+_______________________________________________________________________________________________________
+22)Explain E-R model?
+
+Answer :
+
+E-R Model is Entity- Relationship Model. So, It is necessary to have 
+atleast two entities present in order to show relationship among them and we do 
+it using Diamond symbol / Relationship /Rhombus where we write the verb that is 
+going to be held between two entities.
+
+Entity is shown using rectangle. There are two types of entities : 
+Strong and Weak entity. Weak entity are dependent on Strong entity , 
+at this point the relationship too will be double rhombus (Rhombus inside rhombus)
+
+We can show following types of relationships :
+
+1. One to one.
+2. One to many.
+3. Many to Many.
+4. Many to one.
+_______________________________________________________________________________________________________
+
+23)Explain Object Oriented model?
+
+Answer :
+
+Object oriented data model is based upon real world situations. These situations are represented as objects,
+with different attributes. All these object have multiple relationships between them.
+_______________________________________________________________________________________________________
+24)Explain an Entity?
+
+Answer :
+An entity is an object that exists. It doesn't have to do anything; it just has to exist. 
+In database administration, an entity can be a single thing, person, place, or object. 
+Data can be stored about such entities. A design tool that allows database 
+administrators to view the relationships between several entities is called the entity relationship diagram (ERD).
+_______________________________________________________________________________________________________
+25) Explain an Entity type?
+
+Answer :
+
+A person, organization, object type, or concept about which information is stored.
+Describes the type of the information that is being mastered.
+An entity type typically corresponds to one or several related tables in database.
+_______________________________________________________________________________________________________
+26)Explain an Entity set?
+
+Answer :
+An entity set may be of the following two types:
+ 
+a. Strong entity set
+b. Weak entity set
+
+
+_______________________________________________________________________________________________________
+27) Explain Weak Entity set?
+
+Answer :
+
+A weak entity set is an entity set that does not contain sufficient attributes to uniquely identify its entities. 
+In other words, a primary key does not exist for a weak entity set.
+_______________________________________________________________________________________________________
+28)Explain an attribute?
+
+Answer :
+
+An attribute is defined as a quality or characteristic of a person, place, or thing.
+Following are the types :
+
+a. Multi valued
+b. Simple 
+c. Derived 
+etc.
+_______________________________________________________________________________________________________
+29)Explain a Relation Schema and a Relation?
+
+Answer :
+
+Relation schema: A set of attributes is called a relation schema.
+ A relation schema is also known as table schema.A Relational schema can be described a blueprint of a 
+database that outlines the way data is organized into tables. This blueprint will not contain any type of data.
+
+Relation : It is also known as table / entity. That has rows and columns in it.
+_______________________________________________________________________________________________________
+30)Explain degree of a Relation?
+
+Answer :
+
+The degree of relationship can be defined as the number of occurrences in one entity that is
+ associated with the number of occurrences in another entity.
+
+There is the three degree of relationship:
+
+a. One-to-one (1:1) : If an employee is allocated a company car then 
+   that car can only be driven by that employee.
+
+b. One-to-many (1:M) : An employee works in one department, but a department has many employees.
+
+c. Many-to-many (M:N) : At the same time, an employee can work on several projects, 
+and a project has a team of many employees.
+
+
+_______________________________________________________________________________________________________
+31)Explain Relationship?
+
+Answer :
+
+It is basically a connection between two or more tables.
+We can represent it with the help of ER Diagram.
+
+E-R Model is Entity- Relationship Model. So, It is necessary to have 
+atleast two entities present in order to show relationship among them and we do 
+it using Diamond symbol / Relationship /Rhombus where we write the verb that is 
+going to be held between two entities.
+
+Entity is shown using rectangle. There are two types of entities : 
+Strong and Weak entity. Weak entity are dependent on Strong entity , 
+at this point the relationship too will be double rhombus (Rhombus inside rhombus)
+
+We can show following types of relationships :
+
+1. One to one.
+2. One to many.
+3. Many to Many.
+4. Many to one.
+_______________________________________________________________________________________________________
+32)Explain Relationship set?
+
+Answer :
+
+A relationship set is a set of relationships of same type.
+
+Types are as follows :
+
+a. Unary relationship set - Unary relationship set is a 
+   relationship set where only one entity set participates in a relationship set.
+
+b. Binary relationship set -Binary relationship set is a relationship set 
+   where two entity sets participate in a relationship set.
+
+c.Ternary relationship set - Three entities are involved.
+
+d. N-ary relationship set - N-ary relationship set is a relationship set where ‘n’ 
+entity sets participate in a relationship set.
+_______________________________________________________________________________________________________
+33)Explain normalization?
+
+Answer :
+
+Normalization is a technique to reduce redundancy of the data.
+Following are the types :
+a. 1NF
+b. 2NF
+c. 3NF
+d. BCNF
+_______________________________________________________________________________________________________
+34)Explain Functional Dependency?
+Answer :
+
+The functional dependency is a relationship that exists between two attributes. 
+It typically exists between the primary key and non-key attribute within a table.
+_______________________________________________________________________________________________________
+35)Explain Fully Functional dependency?
+
+Answer :
+
+Full functional dependency is defined as all the non candidate key attributes fully depends upon primary key attribute.
+eg.
+Name and Location fully dependent on ID.
+_______________________________________________________________________________________________________
+36)Explain 1 NF (Normal Form)?
+
+Answer :
+
+As per the rule of first normal form, an attribute (column) of a table cannot hold multiple values. It should hold only atomic values.
+
+Eg. Suppose a company wants to store the names and contact details of its employees.
+
+_______________________________________________________________________________________________________
+37)Explain 2NF?
+
+Answer :
+
+A relation will be in 2NF if it is in 1NF and all non-key attributes are fully functional dependent on the primary key.
+_______________________________________________________________________________________________________
+38)Explain 3NF?
+
+Answer :
+
+A relation will be in 3NF if it is in 2NF and no transition dependency exists.
+_______________________________________________________________________________________________________
+39)Explain BCNF (Boyce-Codd Normal Form)?
+
+Answer :
+
+Boyce–Codd Normal Form (BCNF) is based on functional dependencies that take into account all candidate keys
+ in a relation; however, BCNF also has additional constraints compared with the general definition of 3NF.
+_______________________________________________________________________________________________________
+40)Explain 4NF?
+
+Answer :
+
+A relation will be in 4NF if it is in Boyce Codd normal form and has no multi-valued dependency.
+_______________________________________________________________________________________________________
+41)Explain Domain-Key Normal Form?
+
+Answer :
+
+Domain-key normal form is a normal form used in database normalization which requires that the database 
+contains no constraints other than domain constraints and key constraints.
+_______________________________________________________________________________________________________
+42)Define partial, alternate, artificial, compound and natural key?
+
+Answer :
+
+Partial Key:
+It is a set of attributes that can uniquely identify weak entities and that are
+ related to same owner entity. It is sometime called as Discriminator.
+
+Alternate Key:
+All Candidate Keys excluding the Primary Key are known as Alternate Keys.
+
+Artificial Key:
+If no obvious key, either stand alone or compound is available, then the last
+ resort is to simply create a key, by assigning a unique number to each record or occurrence. 
+Then this is known as developing an artificial key.
+
+Compound Key:
+If no single data element uniquely identifies occurrences within a construct,
+ then combining multiple elements to create a unique identifier for the construct is known as creating a compound key.
+
+Natural Key:
+When one of the data elements stored within a construct is utilized as the primary key,
+then it is called the natural key. 
+_______________________________________________________________________________________________________
+43)Explain indexing and define the different kinds of indexing?
+
+Answer :
+
+Indexing is a technique to make searching faster.
+
+Types of indexes.
+
+a. Clustered: Clustered index sorts and stores the rows data of a table / 
+    view based on the order of clustered index key.
+
+b. Nonclustered: A non clustered index is created using clustered index. 
+
+c. Unique: Unique index ensures the availability of only non-duplicate values and therefore, every row is unique.
+
+d. Full-text: It supports is efficient in searching words in string data. 
+
+e. Spatial: It facilitates the ability for performing operations in 
+            efficient manner on spatial objects. To perform this, the column should be of geometry type.
+
+
+_______________________________________________________________________________________________________
+44)Write in brief the four types of indexes.
+
+Answer :
+
+Types of indexes.
+
+a. Clustered: Clustered index sorts and stores the rows data of a table / 
+    view based on the order of clustered index key.
+
+b. Nonclustered: A non clustered index is created using clustered index. 
+
+c. Unique: Unique index ensures the availability of only non-duplicate values and therefore, every row is unique.
+
+d. Full-text: It supports is efficient in searching words in string data. 
+
+e. Spatial: It facilitates the ability for performing operations in 
+            efficient manner on spatial objects. To perform this, the column should be of geometry type.
+
+_______________________________________________________________________________________________________
+45)Explain system catalog or catalog relation? How is better known as?
+
+Answer :
+
+The catalog relations are also called the system catalog or the data dictionary.
+The system catalog is sometimes also referred to as metadata (data about data).
+
+_______________________________________________________________________________________________________
+46)Explain meant by query optimization?
+
+Answer :
+
+A query optimizer is a critical database management system (DBMS) component that analyzes 
+Structured Query Language (SQL) queries and determines efficient execution mechanisms. 
+_______________________________________________________________________________________________________
+47)Explain SQL and state the differences among SQL and other conventional programming Languages.
+
+Answer :
+
+No wastage of time in software development.So, basically we can save time. 
+_______________________________________________________________________________________________________
+48)Explain database Trigger?
+
+Answer :
+
+A database trigger is procedural code that is automatically 
+executed in response to certain events on a particular table or view in a database.
+_______________________________________________________________________________________________________
+49)Name four applications for triggers.
+
+Answer : 
+
+A database trigger is procedural code that is automatically 
+executed in response to certain events on a particular table or view in a database.
+
+a. Providing default values.
+
+b. Enforcing data constraints.
+
+c. Updating views.
+
+d. Enforcing referential integrity.
+
+_______________________________________________________________________________________________________
+50)Define stored-procedures? And Define the Benefits of using them?
+
+Answer :
+
+Defining - Stored procedures are sub routines or functions.
+
+Since stored procedures are compiled and stored, whenever you call a procedure the response is quick.
+_______________________________________________________________________________________________________
+
+× END × 
