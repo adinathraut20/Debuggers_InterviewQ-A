@@ -379,7 +379,7 @@ b. Binary relationship set -Binary relationship set is a relationship set
 
 c.Ternary relationship set - Three entities are involved.
 
-d. N-ary relationship set - N-ary relationship set is a relationship set where ‘n’ 
+d. N-ary relationship set - N-ary relationship set is a relationship set where Â‘nÂ’ 
 entity sets participate in a relationship set.
 _______________________________________________________________________________________________________
 33)Explain normalization?
@@ -432,7 +432,7 @@ ________________________________________________________________________________
 
 Answer :
 
-Boyce–Codd Normal Form (BCNF) is based on functional dependencies that take into account all candidate keys
+BoyceÂ–Codd Normal Form (BCNF) is based on functional dependencies that take into account all candidate keys
  in a relation; however, BCNF also has additional constraints compared with the general definition of 3NF.
 _______________________________________________________________________________________________________
 40)Explain 4NF?
@@ -566,4 +566,4 @@ Defining - Stored procedures are sub routines or functions.
 Since stored procedures are compiled and stored, whenever you call a procedure the response is quick.
 _______________________________________________________________________________________________________
 
-× END × 
+Ã— END Ã— 
