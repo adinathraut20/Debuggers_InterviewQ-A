@@ -50,9 +50,9 @@ ANS:-	This property ensures that once the transaction has completed execution, t
 
 ANS:-	Aromicity:- Each transaction is considered as one unit and either runs to completion or is not
 	executed at all. It involves the following two operations.
-	—Abort: If a transaction aborts, changes made to database are not visible.
-	—Commit: If a transaction commits, changes made are visible.
-	Atomicity is also known as the ‘All or nothing rule’.
+	â€”Abort: If a transaction aborts, changes made to database are not visible.
+	â€”Commit: If a transaction commits, changes made are visible.
+	Atomicity is also known as the â€˜All or nothing ruleâ€™.
 	
 	Aggregation:-Aggregation is a process in which a single entity alone is not able to make sense in 
 	a relationship so the relationship of two entities acts as one entity. 
